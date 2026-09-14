@@ -77,7 +77,7 @@ function createMenu() {
 
 app.on('ready', () => {
   startServer();
-  setTimeout(createWindow, 2000);
+  setTimeout(createWindow, 5000);
   createMenu();
 });
 
