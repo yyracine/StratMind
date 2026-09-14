@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="node-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e0e7ff" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#312e81" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background Rounded Squircle -->
+  <rect x="32" y="32" width="448" height="448" rx="108" fill="url(#bg-grad)" filter="url(#glow)"/>
+
+  <!-- Network Connection Lines -->
+  <g stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-dasharray="14 10" opacity="0.45">
+    <line x1="256" y1="140" x2="140" y2="240" />
+    <line x1="256" y1="140" x2="372" y2="240" />
+    <line x1="140" y1="240" x2="180" y2="370" />
+    <line x1="372" y1="240" x2="332" y2="370" />
+    <line x1="180" y1="370" x2="332" y2="370" />
+    <line x1="256" y1="140" x2="256" y2="280" />
+    <line x1="256" y1="280" x2="180" y2="370" />
+    <line x1="256" y1="280" x2="332" y2="370" />
+  </g>
+
+  <!-- Central Brain Node -->
+  <circle cx="256" cy="140" r="38" fill="url(#node-grad)" filter="url(#glow)"/>
+  <circle cx="256" cy="140" r="26" fill="#4f46e5" />
+  <circle cx="256" cy="140" r="12" fill="#ffffff" />
+
+  <!-- Decision / Diamond Node (Center) -->
+  <g transform="translate(256, 280) rotate(45)">
+    <rect x="-24" y="-24" width="48" height="48" rx="10" fill="#f59e0b" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="10" fill="#ffffff" />
+  </g>
+
+  <!-- Left Action Node -->
+  <rect x="106" y="210" width="68" height="60" rx="18" fill="#10b981" filter="url(#glow)"/>
+  <circle cx="140" cy="240" r="14" fill="#ffffff" />
+
+  <!-- Right Strategy Node -->
+  <rect x="338" y="210" width="68" height="60" rx="18" fill="#ec4899" filter="url(#glow)"/>
+  <circle cx="372" cy="240" r="14" fill="#ffffff" />
+
+  <!-- Bottom Left Goal Node -->
+  <circle cx="180" cy="370" r="32" fill="#8b5cf6" filter="url(#glow)"/>
+  <circle cx="180" cy="370" r="16" fill="#ffffff" />
+
+  <!-- Bottom Right Analysis Node -->
+  <circle cx="332" cy="370" r="32" fill="#06b6d4" filter="url(#glow)"/>
+  <circle cx="332" cy="370" r="16" fill="#ffffff" />
+</svg>

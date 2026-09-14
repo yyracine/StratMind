@@ -1,0 +1,6 @@
+{
+  "name": "StratMind - Cartographie Mentale & Stratégie",
+  "description": "Application desktop de cartographie mentale inspirée de Miró pour la productivité, la pensée critique et la stratégie avec synchronisation en temps réel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
