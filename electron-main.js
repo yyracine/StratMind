@@ -43,19 +43,12 @@ function createWindow() {
 }
 
 function startServer() {
-  const serverPath = path.join(__dirname, isDev ? 'server.ts' : '../dist/server.cjs');
+  const serverPath = path.join(__dirname, 'dist/server.cjs');
 
-  if (isDev) {
-    serverProcess = spawn('npx', ['tsx', serverPath], {
-      cwd: __dirname,
-      stdio: 'inherit',
-    });
-  } else {
-    serverProcess = spawn('node', [serverPath], {
-      cwd: __dirname,
-      stdio: 'inherit',
-    });
-  }
+  serverProcess = spawn('node', [serverPath], {
+    cwd: __dirname,
+    stdio: 'inherit',
+  });
 
   serverProcess.on('error', (err) => {
     console.error('Erreur serveur:', err);
