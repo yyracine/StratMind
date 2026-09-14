@@ -1,0 +1,57 @@
+appId: com.stratmind.app
+productName: StratMind
+directories:
+  buildResources: public
+  output: release
+
+files:
+  - dist/**/*
+  - electron-main.js
+  - preload.js
+  - package.json
+  - node_modules/**/*
+
+win:
+  target:
+    - nsis
+    - portable
+  certificateFile: null
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: StratMind
+
+portable:
+  artifactName: StratMind-${version}-portable.exe
+
+mac:
+  target:
+    - dmg
+    - zip
+  category: public.app-category.productivity
+
+dmg:
+  contents:
+    - x: 130
+      y: 220
+      type: file
+    - x: 438
+      y: 220
+      type: link
+      path: /Applications
+
+linux:
+  target:
+    - AppImage
+    - deb
+  category: Office
+
+appImage:
+  artifactName: StratMind-${version}.AppImage
+
+deb:
+  depends:
+    - libxss1
